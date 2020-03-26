@@ -99,6 +99,10 @@ header .burger {
   text-align: left;
 }
 
+.slide-caption > * {
+  opacity: 0;
+}
+
 .backdrop {
   background: var(--backdrop-color);
   z-index: 60;
@@ -120,4 +124,81 @@ header .burger {
   font-size: 18px;
   cursor: pointer;
   outline: none;
+}
+
+/* 内容区域 */
+/* 通用样式 */
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  display: grid;
+  justify-items: center;
+  max-width: 1180px;
+  padding: 0 80px;
+}
+
+.title1 {
+  font-size: 34px;
+  color: var(--text-color-darker);
+}
+
+.title1::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 4px;
+  background-color: var(--primary-color);
+  transform: translateX(10%);
+  margin-top: 14px;
+}
+
+.intro {
+  margin: 28px 0 60px 0;
+  color: var(--text-color-dark-gray);
+  font-size: 18px;
+}
+
+/* 关于我们 */
+
+.about-us {
+  margin-bottom: 32px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 126px 126px;
+  column-gap: 5vw;
+}
+
+.feature {
+  display: grid;
+  grid-template-areas: 
+    "icon title"
+    "icon content";
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 1fr 3fr;
+}
+
+.feature i.fas {
+  grid-area: icon;
+  font-size: 34px;
+  color: var(--primary-color);
+}
+
+.feature-title {
+  grid-area: title;
+  font-size: 18px;
+  color: var(--text-color-darker);
+}
+
+.feature-content {
+  grid-area: content;
+  color: var(--text-color-gray);
+  margin-top: 8px;
 }

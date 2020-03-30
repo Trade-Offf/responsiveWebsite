@@ -18,7 +18,7 @@ img {
   --text-color-gray: #8b8b8b;
   --text-color-dark-gray: #727272;
   --text-color-light-gray: #c6c6c6;
-  --backdrop-color: rgb(42,42,42,0.69);
+  --backdrop-color: rgb(42, 42, 42, 0.69);
 }
 
 header {
@@ -67,7 +67,7 @@ header .burger {
 .glide__slide video {
   width: 100vw;
   height: 100vh;
-  object-fit:cover ;
+  object-fit: cover;
 }
 
 .slide-caption {
@@ -78,7 +78,7 @@ header .burger {
   max-width: 60vw;
 }
 
-.glide__slide{
+.glide__slide {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,6 +133,7 @@ header .burger {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 section {
@@ -140,6 +141,20 @@ section {
   justify-items: center;
   max-width: 1180px;
   padding: 0 80px;
+}
+
+.section-bg {
+  position: relative;
+}
+
+.section-bg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #f9fbfb;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
 }
 
 .title1 {
@@ -171,14 +186,14 @@ section {
 
 .features {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 126px 126px;
   column-gap: 5vw;
 }
 
 .feature {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "icon title"
     "icon content";
   grid-template-columns: 60px 1fr;
@@ -201,4 +216,53 @@ section {
   grid-area: content;
   color: var(--text-color-gray);
   margin-top: 8px;
+}
+
+/* 成功案例 */
+.showcases {
+  max-width: unset;
+  padding: 0;
+  padding-top: 72px;
+}
+
+.filter-btns {
+  margin-top: 54px;
+  margin-bottom: 38px;
+}
+
+.filter-btn {
+  margin: 0 7px;
+  border: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color-dark-gray);
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.filter-btn:focus,
+.filter-btn:active {
+  outline: none;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.showcases .cases {
+  width: 100vw;
+}
+
+.showcases .case-item {
+  width: 25vw;
+  height: 20vw;
+  overflow: hidden;
+}
+
+.case-item img{
+  height: 100%;
+  object-fit: cover;
 }

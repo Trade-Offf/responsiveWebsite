@@ -266,3 +266,49 @@ section {
   height: 100%;
   object-fit: cover;
 }
+
+/* 服务流程 */
+.service {
+  padding-top: 131px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr 1fr;
+  column-gap: 38px;
+  row-gap: 34px;
+}
+
+.service-item {
+  display: grid;
+  grid-template-areas: 
+    "icon title"  
+    "icon content"
+  ;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 1fr 3fr;
+  padding: 24px;
+  box-shadow: 0px 0px 18px rgba(0,0,0,0.06);
+}
+
+.service-item i.fas {
+  grid-area: icon;
+  font-size: 42px;
+  color: var(--primary-color);
+  padding: 6px;
+}
+
+.service-item .service-title {
+  grid-area: title;
+  color: var(--text-color-darker);
+  font-size: 24px;
+}
+
+.service-item .service-content {
+  grid-area: content;
+  color: var(--text-color-gray);
+  line-height: 30px;
+  font-size: 16px;
+  margin-top: 8px;
+}

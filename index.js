@@ -59,3 +59,45 @@ filterBtns.addEventListener("click", (e) => {
     isotope.arrange({ filter: filterOption });
   }
 });
+
+//模块逐渐显示动画效果
+const staggeringOption = {
+  delay: 300,
+  distance: "50px",
+  duration: 500,
+  easing: "ease-in-out",
+  origin: "bottom",
+};
+
+ScrollReveal().reveal(".feature", { ...staggeringOption, interval: 350 });
+ScrollReveal().reveal(".service-item", { ...staggeringOption, interval: 350 });
+
+// 数字增加效果 + 背景图随滑动上下移动效果
+const dataSectionEl = document.querySelector(".data-section");
+ScrollReveal().reveal(".data-section", {
+  beforeReveal: () => {
+    anime({
+      targets: ".data-piece .num",
+      innerHTML: (el) => {
+        return [0, el.innerHTML];
+      },
+      duration: 2000,
+      round: 1,
+      easing: "easeInExpo",
+    });
+    dataSectionEl.style.backgroundPosition = `center calc(50% - ${
+      dataSectionEl.getBoundingClientRect().bottom / 5
+    }px)`;
+  },
+});
+
+window.addEventListener("scroll", () => {
+  const bottom = dataSectionEl.getBoundingClientRect().bottom;
+  const top = dataSectionEl.getBoundingClientRect().top;
+
+  if (bottom >= 0 && top <= window.innerHeight) {
+    dataSectionEl.style.backgroundPosition = `center calc(50% - ${
+      bottom / 5
+    }px)`;
+  }
+});

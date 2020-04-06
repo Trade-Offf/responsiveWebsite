@@ -101,3 +101,27 @@ window.addEventListener("scroll", () => {
     }px)`;
   }
 });
+
+const scroll = new SmoothScroll('nav a[href*="#"], .scrollToTop a[href*="#"]', {
+  header: "header",
+});
+
+document.addEventListener("scrollStart", () => {
+  if (headerEL.classList.contains("open")) {
+    headerEL.classList.remove("open");
+  }
+});
+
+const exploreBtnEls = document.querySelectorAll(".explore-btn");
+
+exploreBtnEls.forEach((exploreBtnEl) => {
+  exploreBtnEL.addEventListener("click", () => {
+    scroll.animateScroll(document.querySelector("#about-us"));
+  });
+});
+
+// 折叠按钮
+const burgerEL = document.querySelector(".burger");
+burgerEL.addEventListener("click", () => {
+  headerEL.classList.toggle("open");
+});

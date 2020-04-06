@@ -17,12 +17,12 @@
     <header>
       <div class="logo">佳林科技</div>
       <nav>
-        <a href="#">首页</a>
-        <a href="#">关于我们</a>
-        <a href="#">成功案例</a>
-        <a href="#">服务流程</a>
-        <a href="#">团队介绍</a>
-        <a href="#">公司动态</a>
+        <a href="#home">首页</a>
+        <a href="#about-us">关于我们</a>
+        <a href="#showcases">成功案例</a>
+        <a href="#service">服务流程</a>
+        <a href="#team-intro">团队介绍</a>
+        <a href="#company-activities">公司动态</a>
         <i class="fas fa-search"></i>
       </nav>
       <div class="burger">
@@ -31,7 +31,7 @@
         <div class="burger-line3"></div>
       </div>
     </header>
-    <div class="glide">
+    <div id="home" class="glide">
       <div class="glide__track" data-glide-el="track">
         <div class="glide__slides">
           <div class="glide__slide">
@@ -72,7 +72,7 @@
     </div>
 
     <div class="content-wrapper">
-      <section class="about-us">
+      <section id="about-us" class="about-us">
         <h2 class="title1">关于我们</h2>
         <p class="intro">
           网络公司不仅仅是提供域名租用，网站开发，空间租用，网站建设与网络营销策划相关的企业组织
@@ -128,7 +128,7 @@
           </div>
         </div>
       </section>
-      <section class="showcases section-bg">
+      <section id="showcases" class="showcases section-bg">
         <h2 class="title1">成功案例</h2>
         <div class="filter-btns">
           <button class="filter-btn active" data-filter="*">全部</button>
@@ -175,7 +175,7 @@
           </div>
         </div>
       </section>
-      <section class="service">
+      <section id="service" class="service">
         <h2 class="title1">服务流程</h2>
         <p class="intro">
           网络综合公司，提供包括网络基础服务（如域名、主机、邮箱）和网络增值服务（如网站建设和推广，网站优化）等业务
@@ -225,7 +225,7 @@
           </div>
         </d>
       </section>
-      <section class="team-intro section-bg">
+      <section id="team-intro" class="team-intro section-bg">
         <h2 class="title1">团队介绍</h2>
         <div class="team-members">
           <div class="team-member">
@@ -342,8 +342,8 @@
           <div class="data-desc">个项目</div>
         </div>
       </section>
-      <section class="company-activities">
-        <h2 class="titile1">公司动态</h2>
+      <section id="company-activities" class="company-activities">
+        <h2 class="title1">公司动态</h2>
         <p class="intro">关注公司动态，获取第一时间消息</p>
         <div class="activities">
           <div class="activity">
@@ -450,6 +450,7 @@
     <script src="./libs/anime/anime.min.js"></script>
     <script src="./libs/glide/glide.min.js"></script>
     <script src="./libs/isotope/isotope.pkgd.min.js"></script>
+    <script src="./libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

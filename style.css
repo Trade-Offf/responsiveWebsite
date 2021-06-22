@@ -80,6 +80,10 @@ header.sticky nav i {
   }
 }
 
+.main {
+  overflow-x: hidden;
+}
+
 .glide {
   position: relative;
   top: -80px;
@@ -582,7 +586,6 @@ footer {
   grid-column: 1 / -1;
   justify-self: center;
   color: white;
-  
 }
 
 .scrollToTop {
@@ -745,7 +748,6 @@ footer {
   .slide-caption h1 {
     font-size: 48px;
   }
-
   .slide-caption h3 {
     font-size: 18px;
   }

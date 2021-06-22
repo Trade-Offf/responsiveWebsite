@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./style.css" />
     <title>雀姬天下第一</title>
   </head>
-  <body>
+  <body class="main">
     <header>
       <div class="logo">南风十二</div>
       <nav>
@@ -31,9 +31,12 @@
         <div class="burger-line3"></div>
       </div>
     </header>
+
     <div id="home" class="glide">
       <div class="glide__track" data-glide-el="track">
+        <!-- 顶部轮播图 -->
         <div class="glide__slides">
+          <!-- img1 -->
           <div class="glide__slide">
             <div class="slide-caption">
               <h1>致力于推广竞技日麻规则二次元站</h1>
@@ -43,7 +46,7 @@
             <div class="backdrop"></div>
             <img src="./images/people-in-couch-1024248.jpg" alt="" />
           </div>
-
+          <!-- img2 -->
           <div class="glide__slide">
             <div class="slide-caption left">
               <h1>弃和四暗刻单骑？</h1>
@@ -57,6 +60,7 @@
           </div>
         </div>
       </div>
+      <!-- 轮播图箭头 -->
       <div class="glide__arrows" data-glide-el="controls">
         <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
           <
@@ -65,6 +69,7 @@
           >
         </button>
       </div>
+      <!-- 轮播图圆点 -->
       <div class="glide__bullets" data-glide-el="controls[nav]">
         <button class="glide__bullet" data-glide-dir="0"></button>
         <button class="glide__bullet" data-glide-dir="1"></button>
@@ -72,6 +77,7 @@
     </div>
 
     <div class="content-wrapper">
+      <!-- 关于我们 -->
       <section id="about-us" class="about-us">
         <h2 class="title1">关于我们</h2>
         <p class="intro">
@@ -128,6 +134,7 @@
           </div>
         </div>
       </section>
+      <!-- 成功案例 -->
       <section id="showcases" class="showcases section-bg">
         <h2 class="title1">成功案例</h2>
         <div class="filter-btns">
@@ -175,6 +182,7 @@
           </div>
         </div>
       </section>
+      <!-- 服务流程 -->
       <section id="service" class="service">
         <h2 class="title1">服务流程</h2>
         <p class="intro">
@@ -225,6 +233,7 @@
           </div>
         </d>
       </section>
+      <!-- 团队介绍 -->
       <section id="team-intro" class="team-intro section-bg">
         <h2 class="title1">团队介绍</h2>
         <div class="team-members">
@@ -251,10 +260,7 @@
           </div>
           <div class="team-member">
             <div class="profile-image">
-              <img
-                src="./images/role-feilin.jpg"
-                alt=""
-              />
+              <img src="./images/role-feilin.jpg" alt="" />
             </div>
             <h4 class="name">菲琳·琳盖克</h4>
             <p class="position">骑士团副团长</p>
@@ -296,10 +302,7 @@
           </div>
           <div class="team-member">
             <div class="profile-image">
-              <img
-                src="./images/role-liusheng.jpg"
-                alt=""
-              />
+              <img src="./images/role-liusheng.jpg" alt="" />
             </div>
             <h4 class="name">柳生咲耶</h4>
             <p class="position">基因改造的花间巫女</p>
@@ -320,6 +323,7 @@
           </div>
         </div>
       </section>
+      <!-- 动效数据 -->
       <section class="data-section">
         <div class="data-piece">
           <i class="fas fa-code"></i>
@@ -342,6 +346,7 @@
           <div class="data-desc">个项目</div>
         </div>
       </section>
+      <!-- 公司动态 -->
       <section id="company-activities" class="company-activities">
         <h2 class="title1">公司动态</h2>
         <p class="intro">关注公司动态，获取第一时间消息</p>
@@ -397,6 +402,7 @@
         </div>
       </section>
     </div>
+
     <footer>
       <div class="footer-menus">
         <div class="contact-us">
@@ -440,13 +446,16 @@
             <li><a href="#">文档资源</a></li>
           </ul>
         </div>
-        <p class="icp-info"><a href="http://www.beian.miit.gov.cn/">浙ICP备18021651号-2</a></p>
+        <p class="icp-info">
+          <a href="http://www.beian.miit.gov.cn/">浙ICP备18021651号-2</a>
+        </p>
         <p class="rights">2020 佳林科技 - 响应式网络公司官网 版权所有</p>
         <div class="scrollToTop">
           <a href="#" class="fas fa-chevron-up"></a>
         </div>
       </div>
     </footer>
+
     <script src="./libs/anime/anime.min.js"></script>
     <script src="./libs/glide/glide.min.js"></script>
     <script src="./libs/isotope/isotope.pkgd.min.js"></script>
